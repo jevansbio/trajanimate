@@ -5,6 +5,7 @@ Thus far a function to take x y coordinates and produce an animated map as seen 
 
 Usage in R with animate package
 
+```R
 saveGIF({
   animatetraj(traj2[[1]],8)
 }, interval = 0.1, ani.width = 200, ani.height = 200)
