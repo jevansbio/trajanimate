@@ -1,0 +1,2 @@
+# trajanimate
+animate trajectory files
