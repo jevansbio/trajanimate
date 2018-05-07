@@ -30,7 +30,8 @@ animatetraj=function(trajdf,basezoom){
 			m2=ggmap(m,extent="normal")+
 			geom_path(data =trajdf[1:i,] , aes(x, y),colour="black",linetype = 2,show.legend=F)+
 			geom_point(data =trajdf[i,] , aes(x, y,colour="red",size=1.5),show.legend=F)+
-			coord_cartesian(xlim=mbb[c(2,4)],mbb[c(1,3)],expand=F)
+				scale_y_continuous(lim=mbb[c(1,3)],expand = c(0, 0),oob=c)+
+				scale_x_continuous(lim=mbb[c(2,4)],expand = c(0,0),oob=c)
 		} else {
 			m2=ggmap(m)+geom_point(data =trajdf[i,] , aes(x, y,colour="red",size=1.5),show.legend=F)
 
